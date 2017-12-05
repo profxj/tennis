@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+#
+# See top-level LICENSE file for Copyright information
+#
+# -*- coding: utf-8 -*-
+
+
+"""
+This script generates the Tourney match-ups
+"""
+
+import tennis.scripts.setup_tourney as setup_tourney
+
+if __name__ == '__main__':
+    args = setup_tourney.parser()
+    setup_tourney.main(args)
