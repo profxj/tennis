@@ -1,0 +1,224 @@
+{
+    "Round1": {
+        "A1a": [
+            [
+                "Miles",
+                "Andy"
+            ]
+        ],
+        "A1b": [
+            [
+                "X",
+                "Ramesh"
+            ]
+        ],
+        "A2a": [
+            [
+                "Jack",
+                "John"
+            ]
+        ],
+        "A2b": [
+            [
+                "Will",
+                "Nicolas"
+            ]
+        ],
+        "B1a": [
+            [
+                "George",
+                "Beryl"
+            ]
+        ],
+        "B1b": [
+            [
+                "Dave",
+                "Duke"
+            ]
+        ],
+        "B2a": [
+            [
+                "Alex",
+                "Jim"
+            ]
+        ],
+        "B2b": [
+            [
+                "Felix",
+                "Adam"
+            ]
+        ],
+        "C1a": [
+            [
+                "Joe",
+                "Amir"
+            ]
+        ],
+        "C1b": [
+            [
+                "Dennis",
+                "Dieter"
+            ]
+        ],
+        "C2a": [
+            [
+                "Sean",
+                "Tim"
+            ]
+        ],
+        "C2b": [
+            [
+                "Lee",
+                "Jeff"
+            ]
+        ]
+    },
+    "Round2": {
+        "A1a": [
+            [
+                "Will",
+                "Beryl"
+            ]
+        ],
+        "A1b": [
+            [
+                "Jack",
+                "Duke"
+            ]
+        ],
+        "A2a": [
+            [
+                "Miles",
+                "Jim"
+            ]
+        ],
+        "A2b": [
+            [
+                "X",
+                "Adam"
+            ]
+        ],
+        "B1a": [
+            [
+                "Felix",
+                "Tim"
+            ]
+        ],
+        "B1b": [
+            [
+                "Alex",
+                "Amir"
+            ]
+        ],
+        "B2a": [
+            [
+                "George",
+                "Dieter"
+            ]
+        ],
+        "B2b": [
+            [
+                "Dave",
+                "Jeff"
+            ]
+        ],
+        "C1a": [
+            [
+                "Joe",
+                "Nicolas"
+            ]
+        ],
+        "C1b": [
+            [
+                "Lee",
+                "Andy"
+            ]
+        ],
+        "C2a": [
+            [
+                "Dennis",
+                "John"
+            ]
+        ],
+        "C2b": [
+            [
+                "Sean",
+                "Ramesh"
+            ]
+        ]
+    },
+    "Round3": {
+        "A1a": [
+            [
+                "X",
+                "Amir"
+            ]
+        ],
+        "A1b": [
+            [
+                "Will",
+                "Tim"
+            ]
+        ],
+        "A2a": [
+            [
+                "Miles",
+                "Dieter"
+            ]
+        ],
+        "A2b": [
+            [
+                "Jack",
+                "Jeff"
+            ]
+        ],
+        "B1a": [
+            [
+                "Alex",
+                "John"
+            ]
+        ],
+        "B1b": [
+            [
+                "Felix",
+                "Ramesh"
+            ]
+        ],
+        "B2a": [
+            [
+                "George",
+                "Nicolas"
+            ]
+        ],
+        "B2b": [
+            [
+                "Dave",
+                "Andy"
+            ]
+        ],
+        "C1a": [
+            [
+                "Lee",
+                "Beryl"
+            ]
+        ],
+        "C1b": [
+            [
+                "Sean",
+                "Duke"
+            ]
+        ],
+        "C2a": [
+            [
+                "Joe",
+                "Jim"
+            ]
+        ],
+        "C2b": [
+            [
+                "Dennis",
+                "Adam"
+            ]
+        ]
+    }
+}

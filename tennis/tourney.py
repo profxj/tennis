@@ -5,7 +5,9 @@ import numpy as np
 
 import pdb
 from IPython import embed
+from astropy.table import Table
 
+lbl_group = ['A','B','C','D','E','F']
 
 def generate_match_ups(seeds, nround=3):
     """ """
@@ -23,7 +25,6 @@ def generate_match_ups(seeds, nround=3):
     matches = {}
 
     # Giddy up
-    lbl_group = ['A','B','C','D','E','F']
     for round in range(nround):
         rkey = 'Round{:d}'.format(round+1)
         matches[rkey] = {}
@@ -45,3 +46,25 @@ def generate_match_ups(seeds, nround=3):
                                        seeds['Names'][pair_group*4+lidx[ii]]]]
     # Return
     return matches
+
+def table_from_matches(matches, outfile=None):
+    """
+    matches : dict
+    outfile : str, optional
+      Write to HTML
+    """
+
+    # Build Table
+    match_tbl = Table()
+    ncourts = len(matches['Round1'].keys()) // 2
+    match_tbl['Courts'] = np.arange(ncourts)+1
+
+    rounds = matches.keys()
+
+    for round in rounds:
+        pairings = list(matches[round].keys())
+        pairings.sort()
+        for jj in range(ncourts):
+            pdb.set_trace()
+
+
