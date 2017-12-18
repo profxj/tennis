@@ -48,7 +48,10 @@ def main(pargs):
         print("Wrote: {:s}".format(pargs.json_file))
 
     # Table
-    tourney.table_from_matches(matches)
+    if pargs.table_file is not None:
+        mtch_tbl = tourney.table_from_matches(matches)
+        mtch_tbl.write(pargs.table_file, format='csv')
+
 
 
 

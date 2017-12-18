@@ -47,7 +47,8 @@ def generate_match_ups(seeds, nround=3):
     # Return
     return matches
 
-def table_from_matches(matches, outfile=None):
+
+def table_from_matches(matches):
     """
     matches : dict
     outfile : str, optional
@@ -64,7 +65,16 @@ def table_from_matches(matches, outfile=None):
     for round in rounds:
         pairings = list(matches[round].keys())
         pairings.sort()
+        rmatches = []
         for jj in range(ncourts):
-            pdb.set_trace()
-
+            pair1 = matches[round][pairings[jj*2+0]]
+            pairing1 = '{:s}/{:s}'.format(pair1[0][0],pair1[0][1])
+            #
+            pair2 = matches[round][pairings[jj*2+1]]
+            pairing2 = '{:s}/{:s}'.format(pair2[0][0],pair2[0][1])
+            #
+            rmatches.append(pairing1+' vs. '+pairing2)
+        match_tbl[round] = rmatches
+    # Return
+    return match_tbl
 
