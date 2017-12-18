@@ -5,7 +5,9 @@ import numpy as np
 
 import pdb
 from IPython import embed
+from astropy.table import Table
 
+lbl_group = ['A','B','C','D','E','F']
 
 def generate_match_ups(seeds, nround=3):
     """ """
@@ -23,7 +25,6 @@ def generate_match_ups(seeds, nround=3):
     matches = {}
 
     # Giddy up
-    lbl_group = ['A','B','C','D','E','F']
     for round in range(nround):
         rkey = 'Round{:d}'.format(round+1)
         matches[rkey] = {}
@@ -45,3 +46,35 @@ def generate_match_ups(seeds, nround=3):
                                        seeds['Names'][pair_group*4+lidx[ii]]]]
     # Return
     return matches
+
+
+def table_from_matches(matches):
+    """
+    matches : dict
+    outfile : str, optional
+      Write to HTML
+    """
+
+    # Build Table
+    match_tbl = Table()
+    ncourts = len(matches['Round1'].keys()) // 2
+    match_tbl['Courts'] = np.arange(ncourts)+1
+
+    rounds = matches.keys()
+
+    for round in rounds:
+        pairings = list(matches[round].keys())
+        pairings.sort()
+        rmatches = []
+        for jj in range(ncourts):
+            pair1 = matches[round][pairings[jj*2+0]]
+            pairing1 = '{:s}/{:s}'.format(pair1[0][0],pair1[0][1])
+            #
+            pair2 = matches[round][pairings[jj*2+1]]
+            pairing2 = '{:s}/{:s}'.format(pair2[0][0],pair2[0][1])
+            #
+            rmatches.append(pairing1+' vs. '+pairing2)
+        match_tbl[round] = rmatches
+    # Return
+    return match_tbl
+
