@@ -18,7 +18,7 @@ def generate_match_ups(seeds, nround=3):
     # Require even number of 4 for now
     ngroups = len(seeds) // 4
     if (ngroups % 2) != 0:
-        print("Need even number of sets of 4")
+        print("Need even number of groups")
         embed()
 
     # Matches
